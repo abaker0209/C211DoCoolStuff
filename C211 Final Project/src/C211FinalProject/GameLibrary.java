@@ -16,7 +16,7 @@ public class GameLibrary {
 	public void displayMenu() {
 		// this method will house the display menu for the game library 
 		
-		// Menu options
+		// menu options
 		System.out.println("Welcome to the Game Library!");
 		System.out.println("1. Display Games.");
 		System.out.println("2. Add Game.");
