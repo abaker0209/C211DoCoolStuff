@@ -1,6 +1,6 @@
 /*
-/ Contributor: 
-/ Date: 
+/ Contributor: Samuel Vaughn
+/ Date: 12/2/2024
 / Class: C211 Final Project
 / Description:
 /
@@ -14,6 +14,7 @@ public class Game {
     String title; 
     String genre; 
     String console; 
+    int gameID; 
     int yearPublished; 
     int numAvail; 
     int numRented; 
