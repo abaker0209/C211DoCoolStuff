@@ -63,7 +63,7 @@ public class List {
 	} // close returnGame
 
     // case 5 
-    public void insertLast(Node n) {
+    public void addGame(Node n) {
         // will add a Node(game) to the list
         Node temp = head;
 
