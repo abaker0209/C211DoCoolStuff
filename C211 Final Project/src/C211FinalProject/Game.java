@@ -1,8 +1,8 @@
 /*
-/ Contributor: 
-/ Date: 
+/ Contributor: Samuel Vaughn
+/ Date: 12/3/2024
 / Class: C211 Final Project
-/ Description:
+/Description: Stub for the Game class, representing individual game objects in the library.
 /
 */
 
