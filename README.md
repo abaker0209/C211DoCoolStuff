@@ -15,7 +15,7 @@ Amber Baker, Scott Nguyen, Samuel Vaughn
 /*Project Phase 2 Updates*/
 
 ** Game Class **
-- Contributor: Scott Nguyen                                                                   
+- Contributor: Samuel Vaughn                                                                 
 - Description: Class used to instantiate a game oject.                                       
 - Instance Variables: String title, String genre, String console, int yearPublished, int        numAvail, int numRented                                   
 
