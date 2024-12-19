@@ -114,4 +114,32 @@ public class Game {
         this.price = price;
     }
 
+    // Setter for negetive game count
+    public void setNumAvail(int numAvail) {
+        if (numAvail < 0) {
+            throw new IllegalArgumentException("Number of available games cannot be negative.");
+        }
+        this.numAvail = numAvail;
+    }
+    
+    // Setter for negetive price count
+    public void setPrice(double price) {
+        if (price < 0) {
+            throw new IllegalArgumentException("Price cannot be negative.");
+        }
+        this.price = price;
+    }    
+
+    // Allows for easier method when printing game information
+    @Override
+    public String toString() {
+        return "Title: " + title + "\n" +
+                "Genre: " + genre + "\n" +
+                "Console: " + console + "\n" +
+                "Year Published: " + yearPublished + "\n" +
+                "Available: " + numAvail + "\n" +
+                "Rented: " + numRented + "\n" +
+                "Price: " + price;
+    }
+
 } // close class
