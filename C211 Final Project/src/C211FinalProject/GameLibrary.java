@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class GameLibrary {
     
-    List library = new List();
+    List gamesLibrary = new List();
     
 
     // main method for testing
@@ -75,5 +75,11 @@ public class GameLibrary {
         // menu options
 
     } // close displayMenu
+    
+
+    
+    public void addGame() {
+        
+    }
 
 } // close class
