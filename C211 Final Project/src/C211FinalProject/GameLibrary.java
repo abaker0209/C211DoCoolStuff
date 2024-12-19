@@ -34,6 +34,75 @@ public class GameLibrary {
         }
     }
 
+    // Case 2: Search for a game by title
+    public void searchGames() {
+        System.out.print("Enter the title of the game to search: ");
+        String title = scanner.nextLine();
+        Game game = gameList.searchGames(title);
+        if (game != null) {
+            System.out.println("Game Found: " + game.toString());
+        } else {
+            System.out.println("Game not found.");
+        }
+    }
+
+    // Case 3: Rent a game
+    public void rentGame() {
+        System.out.print("Enter the title of the game to rent: ");
+        String title = scanner.nextLine();
+        Game game = gameList.rentGame(title);
+        if (game != null) {
+            System.out.println("You have rented: " + game.getTitle());
+        } else {
+            System.out.println("The game is not available for rent.");
+        }
+    }
+
+    // Case 4: Return a rented game
+    public void returnGame() {
+        System.out.print("Enter the title of the game to return: ");
+        String title = scanner.nextLine();
+        Game game = gameList.returnGame(title);
+        if (game != null) {
+            System.out.println("You have returned: " + game.getTitle());
+        } else {
+            System.out.println("This game was not rented.");
+        }
+    }
+
+    // Case 5: Add a game to the library
+    public void addGame() {
+        System.out.print("Enter the title of the game: ");
+        String title = scanner.nextLine();
+        System.out.print("Enter the genre of the game: ");
+        String genre = scanner.nextLine();
+        System.out.print("Enter the console of the game: ");
+        String console = scanner.nextLine();
+        System.out.print("Enter the year of release: ");
+        int year = Integer.parseInt(scanner.nextLine());
+        System.out.print("Enter the number of available games: ");
+        int numAvail = Integer.parseInt(scanner.nextLine());
+        System.out.print("Enter the price of the game: ");
+        double price = Double.parseDouble(scanner.nextLine());
+
+        Game newGame = new Game(title, genre, console, year, numAvail, 0, price);
+        Node newNode = new Node(newGame);
+        gameList.addGame(newNode);
+        System.out.println("Game added successfully!");
+    }
+
+    // Case 6: Remove a game from the library
+    public void removeGame() {
+        System.out.print("Enter the title of the game to remove: ");
+        String title = scanner.nextLine();
+        boolean success = gameList.removeGame(title);
+        if (success) {
+            System.out.println("Game removed successfully.");
+        } else {
+            System.out.println("Game not found.");
+        }
+    }
+
     // main method for testing
     public static void main(String[] args) {
 
@@ -43,12 +112,9 @@ public class GameLibrary {
     } // close main
 
     public void displayMenu() {
+        boolean running = true;
         // this method will house the display menu for the game library
         // Contributors: Samuel Vaughn & Amber Baker
-
-        boolean run = true;
-        Scanner scan = new Scanner(System.in);
-        int userChoice = 0;
 
         while (run != false) {
 
@@ -60,6 +126,9 @@ public class GameLibrary {
             System.out.println("5. Add New Game to Library.");
             System.out.println("6. Remove Game from Library.");
             System.out.println("7. Exit.");
+
+            System.out.print("Choose an option: ");
+            int choice = Integer.parseInt(scanner.nextLine());
 
             userChoice = scan.nextInt();
             switch (userChoice) { // need to add a try catch here
